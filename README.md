@@ -5,6 +5,9 @@
 4. `composer create-project --prefer-dist laravel/laravel . "10.*"` (src配下にLaravel10をインストール)
 5. ブラウザで `http://localhost` にアクセスし、Laravelのロゴ入りのトップページが表示されることを確認
 
+<img width="1446" alt="スクリーンショット 2023-06-09 19 39 34" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/69d42fe3-4e3a-4087-91a9-c55640a2671f">
+
+
 # データベースの作成
 1. appコンテナに入っていることを確認
     - (入っていなければ、`docker compose exec app sh`)
@@ -19,10 +22,9 @@
     ```
 
     <details>
-        <summary>.envのファイル全チェック用 (APP_KEYは全員違う値になります)</summary>
-
-        以下.envの内容
-
+        <summary> .envのファイル全チェック用 (開閉してチェックしてください)</summary>
+        以下.envの内容 (APP_KEYは全員違う値になります)
+    
         ```
             APP_NAME=Laravel
             APP_ENV=local
@@ -84,8 +86,7 @@
             VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
         ```
-
-        </details>
+    </details>
 
 3. `php artisan migrate` をして、以下のように出力されていれば成功
     ```shell
@@ -103,6 +104,10 @@
     - `Which stack would you like to install?` : 0 (blade)
     - `Would you like to install dark mode support?` : no
     - `Would you prefer Pest tests instead of PHPUnit?` : no
+
+<img width="1054" alt="breeze install php" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/fdc2377a-df2a-486d-83f4-2232b40151e2">
+
+
 # Breeze インストール方法 NODE側
 
 1. `src/package.json` の内容のscripts部分を以下のように変更する
@@ -124,3 +129,5 @@
 # # Breeze インストール方法 画面確認
 1. トップページの右上に `Log in` `Register` が表示されていることを確認
 2. `Log in` を押すとフォームが正常に表示されていること
+
+<img width="1020" alt="ログイン画面" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/45729c65-e442-43a4-abff-1ad4240ba5fe">
